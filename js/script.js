@@ -20,7 +20,15 @@ function loadData() {
 
     var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location=' + address + '';
     $body.append('<img class="bgimg" src="' + streetviewUrl + '">');
+    
+
     // YOUR CODE GOES HERE!
+
+    var NYTimesURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?=' + cityStr + '&sort=newest&api-key=1d8dfecf2f7c45a5a5855aec78f8d156';
+
+       $.getJSON(NYTimesURL, function(data) {
+    	console.log(data);
+    })
 
     return false;
 };
