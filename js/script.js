@@ -35,7 +35,8 @@ function loadData() {
            
 			for (var i = 0; i < articles.length; i++) {
 				var article = articles[i];
-				$nytElem.append('li class ="article">'+
+				//$nytElem.append('li class="article">'+
+                $nytElem.append('<li>'+
 				'<a href="'+article.web_url+'">'+article.headline.main+'</a>'+
 				'<p>' + article.snippet + '</p>' +
 				'</li>');
